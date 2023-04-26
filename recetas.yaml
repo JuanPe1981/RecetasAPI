@@ -1,0 +1,29 @@
+openapi: 3.0.1
+info:
+  title: Recetas
+  description:
+    "Esta aplicación consiste en una API en la que puedas visualizar, editar y añadir recetas. Ademas con esas recetas
+    tienes que poder mandar los ingredientes a una lista de la compra y también incluye una base de datos donde hay
+    supermercados y comercios donde poder ir a comprar esos productos."
+  version: 0.1.0
+servers:
+  - url: 'https://recetas.com'
+tags:
+  - name: Usuario
+    description: Para usar la API deberás estar registrado por lo que sera necesario tener una tabla de usuarios.
+  - name: Recetas
+    description: Son las recetas que tiene la API.
+  - name: Ingredientes
+    description: Son los ingredientes que se podrán añadir a la lista de la compra.
+  - name: Supermercados
+    description: Son los comercios localizados en el mapa donde puedes ir a comprar.
+paths:
+  /users:
+    get:
+      tags:
+        - Usuario
+      summary: Devuelve la lista de usuarios.
+      description: Optional extended description in Markdown.
+      responses:
+        '200':
+          description: OK
