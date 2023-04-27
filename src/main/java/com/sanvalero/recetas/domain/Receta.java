@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "receta")
+@Entity(name = "recetas")
 public class Receta {
 
     @Id
@@ -17,7 +17,7 @@ public class Receta {
     @Column
     private String titulo;
     @Column
-    private String description;
+    private String descripcion;
     @Column
     private String ingredientes;
 }

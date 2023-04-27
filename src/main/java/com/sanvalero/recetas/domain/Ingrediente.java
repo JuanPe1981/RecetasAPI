@@ -4,11 +4,12 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "ingrediente")
+@Entity(name = "ingredientes")
 public class Ingrediente {
 
     @Id
@@ -21,7 +22,8 @@ public class Ingrediente {
     @Column
     private String tipoUnidad;
     @Column
-    private boolean comprado;
+    @NonNull
+    private Boolean comprado;
     @Column
     private String tipoAlimento;
 }
